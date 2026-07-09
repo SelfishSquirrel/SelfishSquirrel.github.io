@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Daniil Bilenko — Portfolio</title>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Daniil <span>Bilenko</span></a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About Me</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+            </ul>
+            <div class="nav-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Секция Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="hero-greeting">Hi, I'm</p>
+            <h1 class="hero-name">Daniil Bilenko</h1>
+            <p class="hero-title">Unreal Engine C++ Developer / Gameplay Programmer</p>
+            <div class="hero-emblem">
+                <div class="cpp-logo-3d">
+                    <div class="cpp-logo-face cpp-front">
+                        <span class="cpp-text">C</span>
+                        <span class="cpp-plus">++</span>
+                    </div>
+                    <div class="cpp-logo-face cpp-back">
+                        <img src="icons/ue-removebg-preview.png" alt="Unreal Engine" class="emblem-ue-img">
+                    </div>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#about" class="btn btn-outline">About Me</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Секция About Me -->
+    <section class="section" id="about">
+        <div class="section-container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a game developer who dreams of working in the AAA game industry. Game development is not just a career path for me — it's art, passion, and an endless source of inspiration. I pour my heart into every project, striving to create immersive experiences that captivate players and push creative boundaries.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">7+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-outline about-expand-btn" id="aboutExpandBtn">
+                        <span class="expand-text">More Details</span>
+                        <span class="expand-arrow">▼</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Expandable detailed info -->
+            <div class="about-details" id="aboutDetails">
+                <div class="about-details-inner">
+                    <div class="details-section">
+                        <div class="details-header-badge">Unreal Engine Gameplay Programmer &nbsp;|&nbsp; 1–2 years of hands-on experience &nbsp;|&nbsp; UE4 / UE5 (5.0 – 5.7+)</div>
+                    </div>
+
+                    <div class="details-section">
+                        <h4 class="details-heading">Skills & Expertise</h4>
+
+                        <div class="details-block">
+                            <h5 class="details-subheading">Core Engine & Programming</h5>
+                            <ul>
+                                <li><strong>C++ (upper-intermediate):</strong> custom Actor/Component classes, subsystems, UE reflection macros (UPROPERTY, UFUNCTION), interface-driven architecture, plugin integration</li>
+                                <li><strong>Blueprint (upper-intermediate):</strong> complex event graphs, interfaces, event dispatchers, macro libraries, Blueprint/C++ interop</li>
+                                <li><strong>Familiar with UE5 features:</strong> Lumen global illumination, Nanite virtualized geometry, Procedural Content Generation (PCG), World Partition, Level Streaming</li>
+                            </ul>
+                        </div>
+
+                        <div class="details-block">
+                            <h5 class="details-subheading">Gameplay Systems</h5>
+                            <ul>
+                                <li><strong>Gameplay Ability System (GAS) — intermediate:</strong> Gameplay Abilities, Attributes, Effects, Tags, Cues, networked replication</li>
+                                <li>Designed and implemented a full weapon system for a zombie FPS (pickups, ammo management, firing modes, animations)</li>
+                                <li>Player input, character movement, game state management via Game Instance / Game State</li>
+                            </ul>
+                        </div>
+
+                        <div class="details-block">
+                            <h5 class="details-subheading">AI & Behavior</h5>
+                            <ul>
+                                <li>Behavior Tree + Blackboard for enemy decision-making</li>
+                                <li>Environment Query System (EQS) for dynamic threat/cover positioning</li>
+                                <li>AI Perception (sight, hearing) for detection and stealth mechanics</li>
+                                <li><strong>State Tree (UE5)</strong> — used as primary AI driver in the main FPS project, replacing Behavior Tree for modular state management</li>
+                                <li>NavMesh navigation configuration and runtime queries</li>
+                            </ul>
+                        </div>
+
+                        <div class="details-block">
+                            <h5 class="details-subheading">UI / UMG</h5>
+                            <ul>
+                                <li>Widget Blueprints: HUD systems, menus, in-game overlays</li>
+                                <li>UMG animations and transitions</li>
+                                <li>Data Binding for reactive UI</li>
+                                <li>Custom C++ widgets for performance-critical or reusable UI components</li>
+                                <li>Adaptive UI architecture — UI scales and responds to game state changes dynamically</li>
+                            </ul>
+                        </div>
+
+                        <div class="details-block">
+                            <h5 class="details-subheading">Animation</h5>
+                            <ul>
+                                <li>Animation Blueprint, State Machines, Blend Spaces</li>
+                                <li>Anim Montages and Anim Notifies for gameplay event integration</li>
+                            </ul>
+                        </div>
+
+                        <div class="details-block">
+                            <h5 class="details-subheading">Multiplayer & Networking</h5>
+                            <ul>
+                                <li>Actor Replication and property replication</li>
+                                <li>Remote Procedure Calls (Server RPC, Client RPC, NetMulticast)</li>
+                                <li>Dedicated Server setup and configuration</li>
+                                <li>Online Subsystem integration (EOS / Steam-compatible)</li>
+                                <li>Game Instance and Game State management across sessions</li>
+                            </ul>
+                        </div>
+
+                        <div class="details-block">
+                            <h5 class="details-subheading">Audio</h5>
+                            <ul>
+                                <li>Sound Cue integration and ambient/event-driven audio (used in main FPS project)</li>
+                            </ul>
+                        </div>
+
+                        <div class="details-block">
+                            <h5 class="details-subheading">Environment & Level Design Tools</h5>
+                            <ul>
+                                <li>World Partition and Level Streaming for large open worlds</li>
+                                <li>Landscape system for terrain creation</li>
+                            </ul>
+                        </div>
+
+                        <div class="details-block">
+                            <h5 class="details-subheading">Optimization & Profiling</h5>
+                            <ul>
+                                <li>Unreal Insights / Session Frontend profiling</li>
+                                <li>Memory management and garbage collection awareness</li>
+                            </ul>
+                        </div>
+
+                        <div class="details-block">
+                            <h5 class="details-subheading">Materials & Rendering</h5>
+                            <ul>
+                                <li>Material Editor: PBR material authoring, Material Instances, parameter-driven workflows</li>
+                            </ul>
+                        </div>
+
+                        <div class="details-block">
+                            <h5 class="details-subheading">Version Control & Collaboration</h5>
+                            <ul>
+                                <li>Git (GitHub/GitLab) and Perforce</li>
+                                <li>Experience working in multi-discipline teams</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="details-section details-project">
+                        <h4 class="details-heading">Key Project</h4>
+                        <div class="details-project-card">
+                            <div class="details-project-title">Overmind <span>(UE5, 1–2 years)</span></div>
+                            <div class="details-project-role">Role: Gameplay Programmer</div>
+                            <ul>
+                                <li>Designed overall project architecture for scalability and team collaboration</li>
+                                <li>Built a modular weapon system (C++ + Blueprint): pickup, equip, fire, reload, ammo tracking</li>
+                                <li>Implemented AI enemies using UE5 State Tree: patrol, alert, attack, investigate states with EQS-based positioning</li>
+                                <li>Created adaptive HUD and UI system with UMG: ammo counter, health bar, dynamic crosshair, interaction prompts</li>
+                                <li>Integrated event-driven audio system for weapons, footsteps, and enemy reactions</li>
+                                <li>Focused on game feel and player feedback — resulting in consistently positive reception from playtesters</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-icons">
+                <div class="tech-icon-card">
+                    <div class="tech-icon-glow"></div>
+                    <img src="icons/images-removebg-preview.png" alt="Unity" class="tech-img">
+                    <span>Unity</span>
+                </div>
+                <div class="tech-icon-card">
+                    <div class="tech-icon-glow"></div>
+                    <img src="icons/Logo_C_sharp.svg.png" alt="C#" class="tech-img">
+                    <span>C#</span>
+                </div>
+                <div class="tech-icon-card">
+                    <div class="tech-icon-glow"></div>
+                    <img src="icons/ue-removebg-preview.png" alt="Unreal Engine" class="tech-img">
+                    <span>Unreal Engine</span>
+                </div>
+                <div class="tech-icon-card">
+                    <div class="tech-icon-glow"></div>
+                    <img src="icons/ISO_C++_Logo.svg.png" alt="C++" class="tech-img">
+                    <span>C++</span>
+                </div>
+                <div class="tech-icon-card">
+                    <div class="tech-icon-glow"></div>
+                    <img src="icons/fmod.png" alt="C++" class="tech-img">
+                    <span>FMOD</span>
+                </div>
+                <div class="tech-icon-card">
+                    <div class="tech-icon-glow"></div>
+                    <img src="icons/opengl.png" alt="C++" class="tech-img">
+                    <span>OpenGL</span>
+                </div>
+                <div class="tech-icon-card">
+                    <div class="tech-icon-glow"></div>
+                    <img src="icons/git.png" alt="C++" class="tech-img">
+                    <span>GIT</span>
+                </div>
+                <div class="tech-icon-card">
+                    <div class="tech-icon-glow"></div>
+                    <img src="icons/perforce.png" alt="C++" class="tech-img">
+                    <span>Perforce</span>
+                </div>
+
+                <div class="tech-icon-card">
+                    <div class="tech-icon-glow"></div>
+                    <img src="icons/claude.png" alt="C++" class="tech-img">
+                    <span>CLAUDE</span>
+                </div>
+                
+                <div class="tech-icon-card">
+                    <div class="tech-icon-glow"></div>
+                    <img src="icons/githubcopilot.png" alt="C++" class="tech-img">
+                    <span>GITHUB COPILOT</span>
+                </div>
+
+                <div class="tech-icon-card">
+                    <div class="tech-icon-glow"></div>
+                    <img src="icons/gitlabicon.png" alt="C++" class="tech-img">
+                    <span>GitLab</span>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Projects -->
+    <section class="section section-dark" id="projects">
+        <div class="section-container">
+            <h2 class="section-title">Projects</h2>
+
+            <!-- Unreal Engine Projects -->
+            <div class="projects-category">
+                <div class="category-header">
+                    <img src="icons/ue-removebg-preview.png" alt="Unreal Engine" class="category-icon">
+                    <h3 class="category-title">Unreal Engine Projects</h3>
+                    <div class="category-line"></div>
+                </div>
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <div class="project-video">
+                            <video src="Overmind.mp4" muted loop playsinline></video>
+                            <div class="project-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Overmind</h3>
+                            <p>A strategic experience powered by Unreal Engine.</p>
+                            <div class="project-tags">
+                                <span class="tag tag-ue">Unreal Engine</span>
+                                <span class="tag tag-ue">C++</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-video">
+                            <video src="zombie.mp4" muted loop playsinline></video>
+                            <div class="project-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>I'M ALIVE</h3>
+                            <p>Zombie defender game powered by Unreal Engine.</p>
+                            <div class="project-tags">
+                                <span class="tag tag-ue">Unreal Engine</span>
+                                <span class="tag tag-ue">C++</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-video">
+                            <video src="P2.mp4" muted loop playsinline></video>
+                            <div class="project-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Try Kill Them</h3>
+                            <p>A high-performance project powered by Unreal Engine.</p>
+                            <div class="project-tags">
+                                <span class="tag tag-ue">Unreal Engine</span>
+                                <span class="tag tag-ue">C++</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="project-card">
+                        <div class="project-video">
+                            <video src="P1.mp4" muted loop playsinline></video>
+                            <div class="project-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Like A Wizard</h3>
+                            <p>An immersive experience built with Unreal Engine.</p>
+                            <div class="project-tags">
+                                <span class="tag tag-ue">Unreal Engine</span>
+                                <span class="tag tag-ue">C++</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <!-- Unity Projects -->
+            <div class="projects-category">
+                <div class="category-header">
+                    <img src="icons/images-removebg-preview.png" alt="Unity" class="category-icon">
+                    <h3 class="category-title">Unity Projects</h3>
+                    <div class="category-line"></div>
+                </div>
+                <div class="projects-grid">
+
+
+                    <div class="project-card">
+                        <div class="project-video">
+                            <video src="Cut The Grass - Official Release Window Trailer.mp4" muted loop playsinline></video>
+                            <div class="project-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Cut The Grass</h3>
+                            <p>A satisfying lawn-mowing game experience.</p>
+                            <div class="project-tags">
+                                <span class="tag tag-unity">Unity</span>
+                                <span class="tag tag-unity">C#</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-video">
+                            <video src="Prison Simulator - Official Trailer.mp4" muted loop playsinline></video>
+                            <div class="project-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Prison Simulator</h3>
+                            <p>A prison management simulation game.</p>
+                            <div class="project-tags">
+                                <span class="tag tag-unity">Unity</span>
+                                <span class="tag tag-unity">C#</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-github="https://github.com/SelfishBear/LastversPipsik">
+                        <div class="project-video">
+                            <video src="flappy.mp4" muted loop playsinline></video>
+                            <div class="project-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Flappy Bird Clone</h3>
+                            <p>A recreation of the classic Flappy Bird game.</p>
+                            <div class="project-tags">
+                                <span class="tag tag-unity">Unity</span>
+                                <span class="tag tag-unity">C#</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-video">
+                            <video src="word.mp4" muted loop playsinline></video>
+                            <div class="project-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Word App</h3>
+                            <p>A word processing application with rich features.</p>
+                            <div class="project-tags">
+                                <span class="tag tag-unity">Unity</span>
+                                <span class="tag tag-unity">C#</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-video">
+                            <video src="cooking.mp4" muted loop playsinline></video>
+                            <div class="project-overlay">
+                                <span class="play-icon">▶</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Cooking App</h3>
+                            <p>A Game About Cooking!</p>
+                            <div class="project-tags">
+                                <span class="tag tag-unity">Unity</span>
+                                <span class="tag tag-unity">C#</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+            <!-- Game Mechanics & Systems -->
+            <div class="projects-category">
+                <div class="category-header">
+                    <img src="icons/ue-removebg-preview.png" alt="Unreal Engine" class="category-icon">
+                    <h3 class="category-title">Game Mechanics & Systems</h3>
+                    <div class="category-line"></div>
+                </div>
+                <div class="projects-grid">
+                    <!-- Здесь будут видео с игровыми механиками -->
+                    <div class="mechanics-placeholder">
+                        <p>🎮 Coming soon — gameplay mechanics showcases</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Resume -->
+    <section class="section" id="resume">
+        <div class="section-container">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-pdf-wrapper">
+                <div class="resume-pdf-container">
+                    <iframe src="MYRESUME.pdf" class="resume-pdf" title="My Resume"></iframe>
+                </div>
+                <a href="MYRESUME.pdf" download class="btn btn-primary resume-download-btn">⬇ Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно для видео -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-backdrop"></div>
+        <div class="video-modal-content">
+            <button class="video-modal-close" id="videoModalClose">&times;</button>
+            <video id="modalVideo" controls playsinline></video>
+            <div class="video-modal-bar" id="videoModalBar">
+                <a href="#" target="_blank" class="video-modal-github" id="videoModalGithub">
+                    <img src="icons/github.png" alt="GitHub" class="video-modal-github-icon">
+                    <span>View on GitHub</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Daniil Bilenko. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/SelfishBear" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+        const burger = document.getElementById('burger');
+        const navLinks = document.querySelector('.nav-links');
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        // Закрытие меню при клике на ссылку
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                burger.classList.remove('active');
+            });
+        });
+
+        // Видео hover play + клик для открытия модалки
+        const videoModal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+        const videoModalClose = document.getElementById('videoModalClose');
+        const videoModalBar = document.getElementById('videoModalBar');
+        const videoModalGithub = document.getElementById('videoModalGithub');
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            const video = card.querySelector('video');
+            if (video) {
+                card.addEventListener('mouseenter', () => video.play());
+                card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+
+                card.querySelector('.project-video').addEventListener('click', () => {
+                    const githubUrl = card.getAttribute('data-github');
+                    modalVideo.src = video.src;
+                    videoModal.classList.add('active');
+                    modalVideo.play();
+                    document.body.style.overflow = 'hidden';
+
+                    if (githubUrl) {
+                        videoModalGithub.href = githubUrl;
+                        videoModalBar.classList.add('visible');
+                    } else {
+                        videoModalBar.classList.remove('visible');
+                    }
+                });
+            }
+        });
+
+        function closeVideoModal() {
+            videoModal.classList.remove('active');
+            modalVideo.pause();
+            modalVideo.src = '';
+            document.body.style.overflow = '';
+        }
+
+        videoModalClose.addEventListener('click', closeVideoModal);
+        document.querySelector('.video-modal-backdrop').addEventListener('click', closeVideoModal);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeVideoModal();
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // About Me expand/collapse
+        const aboutExpandBtn = document.getElementById('aboutExpandBtn');
+        const aboutDetails = document.getElementById('aboutDetails');
+        aboutExpandBtn.addEventListener('click', () => {
+            const isExpanded = aboutDetails.classList.toggle('expanded');
+            aboutExpandBtn.classList.toggle('active', isExpanded);
+            aboutExpandBtn.querySelector('.expand-text').textContent = isExpanded ? 'Less Details' : 'More Details';
+        });
+
+        // Scroll reveal animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.project-card, .about-text, .stat, .resume-pdf-wrapper, .tech-icon-card, .category-header').forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
